@@ -1,37 +1,11 @@
-## Welcome to GitHub Pages
+## Assingment 07: Functions
 
-You can use the [editor on GitHub](https://github.com/JVOGLER2020/DBFoundations-Module07/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+### Introduction
+This week’s lesson was primarily focused on functions.  A function is a named piece of SQL code used to perform a task.  There are many built in functions, and users can also create their own functions (User Defined Functions, UDF).
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Explain when you would use a SQL UDF
+SQL UDFs are used to store a piece of code used to perform an action and have it easily recalled later when necessary.  Creating a function and calling it later is a way to keep code organized as well.  When the operation is required multiple times, a user define function is an efficient method to accomplish this. Figure 1 below shows an example of this assignments UDF.
 
-### Markdown
+### Explain the differences between a Scalar, Inline, and Multi-Statement Functions
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/JVOGLER2020/DBFoundations-Module07/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+Scalar functions return only a single value.  The data type of the single value in the RETURNS clause of the function must be identified.  In Figure 1, this is done in line 326 (@KPIvalue int).  Inline functions only need RETURNS TABLE specified and the table’s definition will be based on the functions SELECT statement.  A BEGIN/END syntax is not needed for an inline function.  Multi-Statement functions have a RETURNS syntax that specifies the structure of the return table.  A BEGIN/END syntax is required for a multi-statement function.
